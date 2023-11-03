@@ -43,6 +43,18 @@ function Login() {
 
     setIsLoading(true); // Start loading
 
+    setTimeout(() => {
+      setIsLoading(false);
+
+      if (email === "admin@gmail.com" && password === "admin123") {
+        // Successful login, navigate to the homepage
+        navigate("/homePage");
+      } else {
+        // Display an error message
+        toast.error("Invalid email or password.");
+      }
+    }, 2000); // Simulate a 2-second delay for loading
+
     if (!email || !password) {
       setValidMsg({
         email: "Please enter your email.",
