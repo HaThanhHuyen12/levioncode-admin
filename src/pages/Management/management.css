@@ -1,0 +1,90 @@
+.profile {
+  background-color: #f2f2f2;
+  position: relative;
+  z-index: 1;
+}
+.contents {
+  padding: 5%;
+  position: relative;
+  display: flex;
+  z-index: -1;
+  justify-content: space-around;
+  justify-content: start;
+}
+
+.tabs {
+  justify-content: space-between;
+  /* height: 6vh; */
+  /* width: 36vw; */
+  /* background-color: #f7f5fa; */
+}
+.second {
+  background-color: #f2f2f2;
+  display: flex;
+  width: 100%;
+}
+.tab {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #dbdbdb;
+  width: 12vw;
+  height: 45px;
+  margin-bottom: 20%;
+  background-color: #d9d9d9;
+    border-radius: 4px 0px 0px 4px;
+}
+.tab p {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7%;
+}
+.active-tab {
+  border: 1px solid #9453ff;
+  background-color: #ffffff !important;
+  border-right: none;
+  border-radius: 4px 0px 0px 4px;
+}
+.active-tab:hover {
+  border: 1px solid #9453ff;
+  background-color: #ffffff !important;
+  border-right: none;
+}
+.itemLearning {
+  padding: 5%;
+  display: flex;
+  border-bottom: 1px solid;
+}
+.contentTabs {
+  background-color: white;
+  position: relative;
+  width: 100%;
+}
+.content {
+  position: relative;
+  display: none;
+}
+.content-active {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  transition: all 1s ease-in-out;
+  animation: example 0.3s;
+}
+.topContent {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2%;
+}
+.CntUser {
+  width: 100%;
+}
+.bold-row {
+  font-weight: bold;
+}
+.TableUser {
+  width: 100%;
+}
+.bold-row {
+  font-weight: bold;
+}
