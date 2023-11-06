@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MaterialTable from "material-table";
 import "../pages/Management/management.css"
+import { ThemeProvider, createTheme } from "@mui/material";
 const empList = [
   {
     id: 1,
@@ -51,14 +52,14 @@ const empList = [
     Year: "Fourth",
   },
 ];
-  const columns = [
-    { title: "ID", field: "id", editable: false },
-    { title: "Last Name", field: "LastName" },
-    { title: "First Name", field: "FirstName" },
-    { title: "Email", field: "Email" },
-    { title: "Course", field: "Course" },
-    { title: "Year", field: "Year" },
-  ];
+const columns = [
+  { title: "ID", field: "id", editable: false },
+  { title: "Last Name", field: "LastName" },
+  { title: "First Name", field: "FirstName" },
+  { title: "Email", field: "Email" },
+  { title: "Course", field: "Course" },
+  { title: "Year", field: "Year" },
+];
 function User() {
   const [data, setData] = useState(empList);
 

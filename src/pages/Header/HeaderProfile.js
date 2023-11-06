@@ -28,13 +28,13 @@ function HeaderProfile() {
     setMenuOpenProfile((prevMenuOpenProfile) => !prevMenuOpenProfile);
   };
 
-  const data = JSON.parse(localStorage.getItem("data"));
+  const data = JSON.parse(localStorage.getItem("User"));
 
   const renderHeaderRight = () => {
     if (data) {
       return (
         <div className="header_right">
-          <div className="header_right_Icon">
+          {/* <div className="header_right_Icon">
             <Link to="/shoppingCart">
               <img className="addToCart" src={cart1} alt="cart" />
             </Link>
@@ -44,7 +44,7 @@ function HeaderProfile() {
             <Link to="#" id="Heart">
               <img className="" src={heart} alt="heart" />
             </Link>
-          </div>
+          </div> */}
           <div className="Profile">
             <ul>
               <li className="menuImg">
@@ -111,7 +111,7 @@ function HeaderProfile() {
         </Link>
       </div>
       <div className="navContents">
-        <nav ref={navRef}>
+        <nav ref={navRef} style={{ display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
           <div className="cow_header_nav">
             <Link to="/homePage">
               <img src={cow_header} alt="cow_header" />
@@ -119,65 +119,28 @@ function HeaderProfile() {
           </div>
           <div className="responsive-header">
             <div className="text-header">
-              <Link to="/test">Level Test</Link>
-              <Link to="/courseList">Courses</Link>
-              <div className="Learning">
-                <ul>
-                  <li className="menuIcon">
-                    <Link to="/learningResources" className="titleLearning">
-                      Learning Resources
-                    </Link>
-                    <div className="LearningIcon">
-                      {menuOpen ? (
-                        <BiChevronDown onClick={toggleMenu} />
-                      ) : (
-                        <BiChevronRight onClick={toggleMenu} />
-                      )}
-                    </div>
-                    <ul
-                      className={
-                        menuOpen ? "menuLearning show" : "menuLearning"
-                      }
-                    >
-                      <li>
-                        <Link to="/podcast">Podcast</Link>
-                      </li>
-                      <li>
-                        <Link to="#">Digital Flashcards</Link>
-                      </li>
-                      <li>
-                        <Link to="/blog">Blog</Link>
-                      </li>
-                      <li>
-                        <Link to="/socialNetwork">Social Network</Link>
-                      </li>
-                      <li>
-                        <Link to="#">Our Community</Link>
-                      </li>
-                      <li>
-                        <Link to="#">eBooks</Link>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <Link to="/aboutUs">About us</Link>
               <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                 <BiMinus />
               </button>
             </div>
-            <div className="btnHeader">{renderHeaderRight()}</div>
+            <div className="btnHeader" style={{
+              display: 'flex',
+              gap: '10px',
+              alignItems: 'center'
+            }}>
+              {renderHeaderRight()}
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '5px'
+              }}>
+                <p>{data.username}</p>
+                <p>{data.email}</p>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
-      <div className="btnCart">
-        <Link to="/shoppingCart">
-          <img className="addToCart1" src={cart1} alt="cart" />
-        </Link>
-      </div>
-      <button className="nav-btn" onClick={showNavbar}>
-        <BiMenu />
-      </button>
     </header>
   );
 }

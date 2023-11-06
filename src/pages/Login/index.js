@@ -48,7 +48,11 @@ function Login() {
 
       if (email === "admin@gmail.com" && password === "admin123") {
         // Successful login, navigate to the homepage
-        navigate("/homePage");
+        navigate("/Management");
+        localStorage.setItem("User", JSON.stringify({
+          username: "ADMIN",
+          email: "admin@gmail.com"
+        }))
       } else {
         // Display an error message
         toast.error("Invalid email or password.");
@@ -81,9 +85,7 @@ function Login() {
 
         <div id={styles.login}>
           <div className={styles.logo1}>
-            <a href="/homePage">
-              <img src={logo1} alt="a" />
-            </a>
+            <img src={logo1} alt="#" />
           </div>
 
           <div className={styles.heading}>
