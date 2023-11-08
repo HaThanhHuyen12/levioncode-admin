@@ -28,7 +28,7 @@ function HeaderProfile() {
     setMenuOpenProfile((prevMenuOpenProfile) => !prevMenuOpenProfile);
   };
 
-  const data = JSON.parse(localStorage.getItem("User"));
+  const data = JSON.parse(localStorage.getItem("User")) || { username: "ADMIN", email: "admin@gmail.com" };
 
   const renderHeaderRight = () => {
     if (data) {
