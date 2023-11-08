@@ -5,39 +5,60 @@ import "../pages/Management/management.css";
 const empList = [
   {
     id: 1,
-    Course: "Master Your Pronounciation Course, ",
-    CourseCode: "BSED",
+    LastName: "Master Your Pronounciation Course, ",
+    FirstName: "BSED",
+    Email: "Example@gmail.com",
+    Course: "BSIT",
+    Year: "Fourth"
   },
   {
     id: 2,
-    Course: "Master Your Pronounciation Course",
-    CourseCode: "BSED",
+    LastName: "Master Your Pronounciation Course, ",
+    FirstName: "BSED",
+    Email: "Example@gmail.com",
+    Course: "BSIT",
+    Year: "Fourth"
   },
   {
     id: 3,
-    Course: "Master Your Pronounciation Course",
-    CourseCode: "BSED",
+    LastName: "Master Your Pronounciation Course, ",
+    FirstName: "BSED",
+    Email: "Example@gmail.com",
+    Course: "BSIT",
+    Year: "Fourth"
   },
   {
     id: 4,
-    Course: "Master Your Pronounciation Course",
-    CourseCode: "BSED",
+    LastName: "Master Your Pronounciation Course, ",
+    FirstName: "BSED",
+    Email: "Example@gmail.com",
+    Course: "BSIT",
+    Year: "Fourth"
   },
   {
     id: 5,
-    Course: "Master Your Pronounciation Course",
-    CourseCode: "BSED",
+    LastName: "Master Your Pronounciation Course, ",
+    FirstName: "BSED",
+    Email: "Example@gmail.com",
+    Course: "BSIT",
+    Year: "Fourth"
   },
   {
     id: 6,
-    Course: "Master Your Pronounciation Course",
-    CourseCode: "BSED",
+    LastName: "Master Your Pronounciation Course, ",
+    FirstName: "BSED",
+    Email: "Example@gmail.com",
+    Course: "BSIT",
+    Year: "Fourth"
   },
 ];
 const columns = [
   { title: "ID", field: "id", editable: false },
+  { title: "Last Name", field: "LastName" },
+  { title: "First Name", field: "FirstName" },
+  { title: "Email", field: "Email" },
   { title: "Course", field: "Course" },
-  { title: "Course Code", field: "CourseCode" },
+  { title: "Year", field: "Year" },
 ];
 function Payment() {
   const [data, setData] = useState(empList);

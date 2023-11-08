@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./management.css";
 import LayoutWithHeader from "../../components/layoutWithHeader";
 import { BiSearch } from "react-icons/bi";
-import  User  from "../../components/User";
+import User from "../../components/User";
 import Course from "../../components/Course";
+import Payment from "../../components/Payment";
 
 function Profile() {
   const [state, setState] = useState(1);
@@ -58,7 +59,11 @@ function Profile() {
                 </div>
               </div>
               <div className={`content ${state === 3 ? "content-active" : ""}`}>
-                <div className="Billing"></div>
+                <div className="Billing">
+                  <div className="TableUser">
+                    <Payment />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
